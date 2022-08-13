@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.codx.webchar.mapper.OdsXytsyyMapper">
+  <resultMap id="BaseResultMap" type="top.codx.webchar.model.OdsXytsyy">
+    <!--@mbg.generated-->
+    <!--@Table ods_xytsyy-->
+    <id column="XXTSYYID" jdbcType="VARCHAR" property="xxtsyyid" />
+    <result column="XXJGDM" jdbcType="VARCHAR" property="xxjgdm" />
+    <result column="XXJGMC" jdbcType="VARCHAR" property="xxjgmc" />
+    <result column="TSYYFL" jdbcType="VARCHAR" property="tsyyfl" />
+    <result column="TSYYJC" jdbcType="VARCHAR" property="tsyyjc" />
+    <result column="TSYYQC" jdbcType="VARCHAR" property="tsyyqc" />
+    <result column="TSYYDYDZ" jdbcType="VARCHAR" property="tsyydydz" />
+    <result column="SJCJSJ" jdbcType="VARCHAR" property="sjcjsj" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    XXTSYYID, XXJGDM, XXJGMC, TSYYFL, TSYYJC, TSYYQC, TSYYDYDZ, SJCJSJ
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from ods_xytsyy
+    where XXTSYYID = #{xxtsyyid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from ods_xytsyy
+    where XXTSYYID = #{xxtsyyid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="top.codx.webchar.model.OdsXytsyy">
+    <!--@mbg.generated-->
+    insert into ods_xytsyy (XXTSYYID, XXJGDM, XXJGMC, 
+      TSYYFL, TSYYJC, TSYYQC, 
+      TSYYDYDZ, SJCJSJ)
+    values (#{xxtsyyid,jdbcType=VARCHAR}, #{xxjgdm,jdbcType=VARCHAR}, #{xxjgmc,jdbcType=VARCHAR}, 
+      #{tsyyfl,jdbcType=VARCHAR}, #{tsyyjc,jdbcType=VARCHAR}, #{tsyyqc,jdbcType=VARCHAR}, 
+      #{tsyydydz,jdbcType=VARCHAR}, #{sjcjsj,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="top.codx.webchar.model.OdsXytsyy">
+    <!--@mbg.generated-->
+    insert into ods_xytsyy
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="xxtsyyid != null">
+        XXTSYYID,
+      </if>
+      <if test="xxjgdm != null">
+        XXJGDM,
+      </if>
+      <if test="xxjgmc != null">
+        XXJGMC,
+      </if>
+      <if test="tsyyfl != null">
+        TSYYFL,
+      </if>
+      <if test="tsyyjc != null">
+        TSYYJC,
+      </if>
+      <if test="tsyyqc != null">
+        TSYYQC,
+      </if>
+      <if test="tsyydydz != null">
+        TSYYDYDZ,
+      </if>
+      <if test="sjcjsj != null">
+        SJCJSJ,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="xxtsyyid != null">
+        #{xxtsyyid,jdbcType=VARCHAR},
+      </if>
+      <if test="xxjgdm != null">
+        #{xxjgdm,jdbcType=VARCHAR},
+      </if>
+      <if test="xxjgmc != null">
+        #{xxjgmc,jdbcType=VARCHAR},
+      </if>
+      <if test="tsyyfl != null">
+        #{tsyyfl,jdbcType=VARCHAR},
+      </if>
+      <if test="tsyyjc != null">
+        #{tsyyjc,jdbcType=VARCHAR},
+      </if>
+      <if test="tsyyqc != null">
+        #{tsyyqc,jdbcType=VARCHAR},
+      </if>
+      <if test="tsyydydz != null">
+        #{tsyydydz,jdbcType=VARCHAR},
+      </if>
+      <if test="sjcjsj != null">
+        #{sjcjsj,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="top.codx.webchar.model.OdsXytsyy">
+    <!--@mbg.generated-->
+    update ods_xytsyy
+    <set>
+      <if test="xxjgdm != null">
+        XXJGDM = #{xxjgdm,jdbcType=VARCHAR},
+      </if>
+      <if test="xxjgmc != null">
+        XXJGMC = #{xxjgmc,jdbcType=VARCHAR},
+      </if>
+      <if test="tsyyfl != null">
+        TSYYFL = #{tsyyfl,jdbcType=VARCHAR},
+      </if>
+      <if test="tsyyjc != null">
+        TSYYJC = #{tsyyjc,jdbcType=VARCHAR},
+      </if>
+      <if test="tsyyqc != null">
+        TSYYQC = #{tsyyqc,jdbcType=VARCHAR},
+      </if>
+      <if test="tsyydydz != null">
+        TSYYDYDZ = #{tsyydydz,jdbcType=VARCHAR},
+      </if>
+      <if test="sjcjsj != null">
+        SJCJSJ = #{sjcjsj,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where XXTSYYID = #{xxtsyyid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="top.codx.webchar.model.OdsXytsyy">
+    <!--@mbg.generated-->
+    update ods_xytsyy
+    set XXJGDM = #{xxjgdm,jdbcType=VARCHAR},
+      XXJGMC = #{xxjgmc,jdbcType=VARCHAR},
+      TSYYFL = #{tsyyfl,jdbcType=VARCHAR},
+      TSYYJC = #{tsyyjc,jdbcType=VARCHAR},
+      TSYYQC = #{tsyyqc,jdbcType=VARCHAR},
+      TSYYDYDZ = #{tsyydydz,jdbcType=VARCHAR},
+      SJCJSJ = #{sjcjsj,jdbcType=VARCHAR}
+    where XXTSYYID = #{xxtsyyid,jdbcType=VARCHAR}
+  </update>
+</mapper>
